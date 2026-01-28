@@ -1,0 +1,2 @@
+﻿Write-Host "===== Every Stopped Service =====" #Header for task 3 
+Get-service | Where-Object { $_.Status -eq 'Stopped' } | Sort-Object -Property Name | Export-Csv -Path "Task#3.csv" -NoTypeInformation #Get-Service Gets all services on the system, Where-Object filters these services to only show stopped ones, Sort-Object sorts the services alphabeticaly, and Export-csv saves the output to a CSV file. 

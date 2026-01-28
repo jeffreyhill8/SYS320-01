@@ -1,0 +1,2 @@
+﻿Write-Host "===== Processes not in system 32 =====" #Header for task 2
+Get-Process | Where-Object { $_.Path -notlike "*system32*" } #Get-Process gets all running processes and Where-Object Filters to only show processes not connected to System32

@@ -1,0 +1,2 @@
+﻿Write-Host "===== Processes Starting with 'C' =====" #Header for task 1
+Get-Process | Where-Object { $_.ProcessName -ilike "C*" } #Get-Process gets all running processes and Where-Object Filters the results 
